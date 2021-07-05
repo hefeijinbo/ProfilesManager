@@ -189,10 +189,10 @@ static NSString *kColumnIdentifierCreateDays = @"days";
             if ([realItem.detail isEqualToString:@"Expired"] || [realItem.detail isEqualToString:@"过期"]) {
                 cell.textColor = [NSColor redColor];
             } else {
-                cell.textColor = [NSColor whiteColor];
+                cell.textColor = [NSColor brownColor];
             }
         } else {
-            cell.textColor = [NSColor whiteColor];
+            cell.textColor = [NSColor brownColor];
         }
     }
 }
