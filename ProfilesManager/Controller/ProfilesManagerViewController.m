@@ -24,8 +24,8 @@ static NSString *kColumnIdentifierType = @"type";
 static NSString *kColumnIdentifierDetal = @"detail";
 //    static NSString *kColumnIdentifierUUID = @"uuid";
 static NSString *kColumnIdentifierExpirationDate = @"expirationDate";
-static NSString *kColumnIdentifierCreateDate = @"creationDate";
-static NSString *kColumnIdentifierCreateDays = @"days";
+static NSString *kColumnIdentifierTeamName = @"teamName";
+static NSString *kColumnIdentifierUUID = @"uuid";
 
 @implementation ProfilesManagerViewController
 
@@ -102,7 +102,7 @@ static NSString *kColumnIdentifierCreateDays = @"days";
             }
         }
     }
-    ProfilesNode *node = [[ProfilesNode alloc]initWithRootNode:nil originInfo:provisions key:@"Mobile Provisions"];
+    ProfilesNode *node = [[BWManager sharedManager] initWithRootNode:nil originInfo:provisions key:@"Mobile Provisions"];
     _rootNode = node;
     [self.treeView reloadData];
     [self updateStatus];
@@ -144,10 +144,11 @@ static NSString *kColumnIdentifierCreateDays = @"days";
         return realItem.detail;
     } else if ([[tableColumn identifier] isEqualToString:kColumnIdentifierExpirationDate]) {
         return  [[DateManager sharedManager] stringConvert_YMDHM_FromDate:realItem.expirationDate];
-    } else if ([[tableColumn identifier] isEqualToString:kColumnIdentifierCreateDate]) {
-        return [[DateManager sharedManager] stringConvert_YMDHM_FromDate:realItem.creationDate];
-    }else if ([[tableColumn identifier] isEqualToString:kColumnIdentifierCreateDays]) {
-        return realItem.days;
+    } else if ([[tableColumn identifier] isEqualToString:kColumnIdentifierTeamName]) {
+        return realItem.teamName;
+//        return [[DateManager sharedManager] stringConvert_YMDHM_FromDate:realItem.creationDate];
+    }else if ([[tableColumn identifier] isEqualToString:kColumnIdentifierUUID]) {
+        return realItem.uuid;
     }
     return @"";
 }

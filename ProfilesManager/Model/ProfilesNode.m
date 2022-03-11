@@ -79,6 +79,7 @@
             NSDictionary *dict = info;
             _detail = [NSString stringWithFormat:@"%lu items", (unsigned long)[dict count]];
             _uuid = [dict objectForKey:@"UUID"];
+            _teamName = [dict objectForKey:@"TeamName"];
             _filePath = [dict objectForKey:@"filePath"];
             
             if(_uuid){

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		326FD53C27DA12B600E5D5CC /* BWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 326FD53B27DA12B600E5D5CC /* BWManager.m */; };
 		A21193201AF1CA5B0064CA7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A211931F1AF1CA5B0064CA7D /* AppDelegate.m */; };
 		A21193221AF1CA5B0064CA7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A21193211AF1CA5B0064CA7D /* main.m */; };
 		A21193241AF1CA5B0064CA7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21193231AF1CA5B0064CA7D /* Images.xcassets */; };
@@ -49,6 +50,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		326FD53A27DA12B600E5D5CC /* BWManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWManager.h; sourceTree = "<group>"; };
+		326FD53B27DA12B600E5D5CC /* BWManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWManager.m; sourceTree = "<group>"; };
+		326FD54727DA14B600E5D5CC /* BWPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWPrefix.pch; sourceTree = "<group>"; };
 		A21193191AF1CA5B0064CA7D /* ProfilesManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfilesManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A211931D1AF1CA5B0064CA7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A211931E1AF1CA5B0064CA7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +142,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		326FD53927DA126900E5D5CC /* BWManager */ = {
+			isa = PBXGroup;
+			children = (
+				326FD54727DA14B600E5D5CC /* BWPrefix.pch */,
+				326FD53A27DA12B600E5D5CC /* BWManager.h */,
+				326FD53B27DA12B600E5D5CC /* BWManager.m */,
+			);
+			path = BWManager;
+			sourceTree = "<group>";
+		};
 		A21193101AF1CA5B0064CA7D = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +339,7 @@
 		B8FF31C021929EA40022C658 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				326FD53927DA126900E5D5CC /* BWManager */,
 				A275FAA92426FD2C00A044CC /* CertificateManger */,
 				B8FF31C121929EAF0022C658 /* DateManager */,
 				B8F694BD204D40250048F3E6 /* PlistManager */,
@@ -437,6 +452,7 @@
 				B804235B2192BD9100AD899F /* GitHubReleaseAsset.m in Sources */,
 				B8BCD2401E6CEFCB00ABD2A6 /* iAlert.m in Sources */,
 				A21193201AF1CA5B0064CA7D /* AppDelegate.m in Sources */,
+				326FD53C27DA12B600E5D5CC /* BWManager.m in Sources */,
 				B80423622192BD9100AD899F /* GitHubVersion.m in Sources */,
 				B80423682192BD9100AD899F /* GitHubProgressWindowController.m in Sources */,
 				B8F694BB204D3ADF0048F3E6 /* PreviewViewController.m in Sources */,
@@ -598,6 +614,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ProfilesManager/ProfilesManager.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ProfilesManager/Manager/BWManager/BWPrefix.pch;
 				INFOPLIST_FILE = ProfilesManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -615,6 +633,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ProfilesManager/ProfilesManager.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ProfilesManager/Manager/BWManager/BWPrefix.pch;
 				INFOPLIST_FILE = ProfilesManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;

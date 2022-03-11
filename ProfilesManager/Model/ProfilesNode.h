@@ -20,6 +20,7 @@
 @property (nonatomic, copy)NSString *detail;
 @property (nonatomic, copy)NSString *type;
 @property (nonatomic, copy)NSString *uuid;
+@property (nonatomic, copy)NSString *teamName;
 @property (nonatomic, copy)NSString *filePath;
 @property (nonatomic, strong)NSDictionary *extra;
 @property (nonatomic, strong)NSDate *expirationDate;
