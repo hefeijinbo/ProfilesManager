@@ -143,9 +143,9 @@ static NSString *kColumnIdentifierUUID = @"uuid";
     } else if ([[tableColumn identifier] isEqualToString:kColumnIdentifierDetal]) {
         return realItem.detail;
     } else if ([[tableColumn identifier] isEqualToString:kColumnIdentifierExpirationDate]) {
-        return  [[DateManager sharedManager] stringConvert_YMDHM_FromDate:realItem.expirationDate];
+        return realItem.developerSha1;
     } else if ([[tableColumn identifier] isEqualToString:kColumnIdentifierTeamName]) {
-        return realItem.teamName;
+        return realItem.developerCertificatesName;
 //        return [[DateManager sharedManager] stringConvert_YMDHM_FromDate:realItem.creationDate];
     }else if ([[tableColumn identifier] isEqualToString:kColumnIdentifierUUID]) {
         return realItem.uuid;

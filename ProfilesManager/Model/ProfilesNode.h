@@ -23,6 +23,8 @@
 @property (nonatomic, copy)NSString *teamName;
 @property (nonatomic, copy)NSString *filePath;
 @property (nonatomic, strong)NSDictionary *extra;
+@property (nonatomic, copy) NSString *developerCertificatesName;
+@property (nonatomic, copy) NSString *developerSha1;
 @property (nonatomic, strong)NSDate *expirationDate;
 @property (nonatomic, strong)NSDate *creationDate;
  

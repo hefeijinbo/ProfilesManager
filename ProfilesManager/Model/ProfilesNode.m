@@ -149,10 +149,19 @@
                     _extra = cerInfo;
                     _key  = [NSString stringWithFormat:@"%@",[cerInfo objectForKey:@"summary"]];
                     _type = @".cer";
-                    
+                    _developerSha1 = [cerInfo objectForKey:@"sha1"];
+                    _developerCertificatesName = [cerInfo objectForKey:@"summary"];
+
                     ProfilesNode *child = [[ProfilesNode alloc]initWithRootNode:self originInfo:_extra key:_key];
                     _childrenNodes = child.childrenNodes;
                 }
+            }
+        }
+        
+        for (ProfilesNode *node in _childrenNodes) {
+            if (node.developerSha1.length > 0) {
+                _developerSha1 = node.developerSha1;
+                _developerCertificatesName = node.developerCertificatesName;
             }
         }
         
