@@ -190,10 +190,10 @@ static NSString *kColumnIdentifierUUID = @"uuid";
             if ([realItem.detail isEqualToString:@"Expired"] || [realItem.detail isEqualToString:@"过期"]) {
                 cell.textColor = [NSColor redColor];
             } else {
-                cell.textColor = [NSColor brownColor];
+                cell.textColor = [NSColor redColor];
             }
         } else {
-            cell.textColor = [NSColor brownColor];
+            cell.textColor = [NSColor redColor];
         }
     }
 }
